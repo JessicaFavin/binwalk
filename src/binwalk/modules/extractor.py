@@ -255,7 +255,7 @@ class Extractor(Module):
                     # the same file can end up being listed multiple times if there are symlinks to it.
                     if real_file_path != dd_file_path:
                         self.output[r.file.path].extracted[r.offset].files.append(file_path)
-
+#------------------------------------------------------------------------------------------------------------------------------------------
                     # If recursion was specified, and the file is not the same
                     # one we just dd'd
                     if (self.matryoshka and
@@ -273,11 +273,11 @@ class Extractor(Module):
                                     for f in files:
                                         full_path = os.path.join(root, f)
                                         self.add_pending(full_path)
-                            # If it's just a file, it to the list of pending
+                            # If it's just a add file, it to the list of pending
                             # files
                             else:
                                 self.add_pending(file_path)
-
+#--------------------------------------------------------------------------------------------------------------------------------------------
                 # Update the last directory listing for the next time we
                 # extract a file to this same output directory
                 self.last_directory_listing[
